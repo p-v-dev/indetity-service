@@ -1,0 +1,43 @@
+# --- Binários e Executáveis ---
+# Compilados do Go
+bin/
+dist/
+auth-service
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# --- Variáveis de Ambiente (CRÍTICO) ---
+# Nunca suba suas chaves do Postgres/Redis ou JWT Secrets
+.env
+.env.*
+!.env.example
+
+# --- Dependências ---
+# Se estiver usando Go Modules, o vendor/ é opcional.
+# A maioria prefere não subir, mas se usar `go mod vendor`, comente a linha abaixo.
+vendor/
+
+# --- Logs e Dados Temporários ---
+*.log
+tmp/
+out/
+
+# --- Ferramentas de Desenvolvimento ---
+# Air (Hot Reload muito usado com Chi)
+.tmp/
+bin/air
+
+# --- IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# --- Docker (Se usar localmente) ---
+.docker-data/
+pgdata/
+redisdata/
